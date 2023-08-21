@@ -1,0 +1,130 @@
+.message-send-section{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid  black;
+    .file{
+        display: flex;
+        padding: 8px;
+        font-size: 20px;
+        cursor: pointer;
+        color: var(--icon-color);
+        label{
+            display: flex;
+            align-items: center;
+            margin-bottom: 0px;
+            cursor: pointer;
+            color: var(--icon-color);
+        }
+        #pic{
+            display: none;
+        }
+        .add-image,.add-attachment,.add-gift{
+            position: fixed;
+            padding: 4px;
+            background: lightblue;
+            font-size: 14px;
+            bottom: 44px;
+            display: none;
+            color: var(--text-white);
+        }
+    }
+    .hover-attachment{
+        position: relative;
+        &:hover{
+            .add-attachment{
+                display: block;
+            }
+        }
+    }
+    .hover-image{
+        position: relative;
+        &:hover{
+            .add-image{
+                display: block;
+            }
+        }
+    }
+    .hover-gift{
+        position: relative;
+      
+        &:hover{
+            .add-gift{
+                display: block;
+            }
+        }
+
+       
+    }
+    .message-type{
+        display: flex;
+        width: 70%;
+        height: 40px;
+        background-color: white;
+        border-radius: 50px;
+        border: none;
+        align-items: center;
+        outline:1px solid #12f5f5;
+        ::placeholder{
+            color: grey;
+            opacity:.3 !important ;
+            background-color:white;
+            
+        }
+        input{
+            
+            outline: none;
+            font-size: 16px;
+            margin-left: 10px;
+            
+            
+        }
+        .form-control{
+            
+            width: 100%;
+            border-bottom-left-radius: 50px;
+            border-top-left-radius: 50px;
+            background-color: transparent;
+            border: none;
+            
+            &::placeholder{
+                color: var(--text-color);
+            }
+        }
+        
+        label{
+            font-size: 20px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+    }
+    .emoji-section{
+        width: 300px;
+        background: #0e131d;
+        position: absolute;
+        right: 60px;
+        padding: 6px;
+        bottom: 50px;
+        border-radius: 8px;
+        border-bottom-right-radius: 0px;
+        display: none;
+        .emoji{
+            display: grid;
+            grid-template-columns: repeat(10,1fr);
+            grid-gap: 4px;
+            
+            span{
+                cursor: pointer;
+              
+            }
+        }
+    }
+    #emoji{
+        display: none;
+    }
+    #emoji:checked ~ .emoji-section{
+        display: block;
+    }
+}

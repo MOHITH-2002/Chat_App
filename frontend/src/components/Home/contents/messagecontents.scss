@@ -1,0 +1,34 @@
+.messagecontents{
+    .heading{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h2{
+            font-size: 40px;
+            color:grey;
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+            text-align: center;
+            color:gray;
+        }
+
+    }
+    .image{
+        position: relative;
+        display: flex;align-items: center;justify-content: center;
+        svg{
+            position: relative;
+            
+            
+        }
+        img{
+            position: absolute;
+            width:90%;
+            height:80%;
+            
+        }
+    }
+}

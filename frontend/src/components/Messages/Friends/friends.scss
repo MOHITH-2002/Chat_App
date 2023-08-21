@@ -1,0 +1,86 @@
+.friends{
+    display: flex;
+    flex-direction: column;
+    background-color: #DDE6ED;
+    height: 100%;     
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    .hover-friend.active{
+        background-color: lightblue;
+        border-radius: 20px;
+        
+    }
+    .hover-friend{
+        cursor: pointer;
+        padding: 0px 10px;
+        &:hover{
+           background-color: lightblue;
+           border-radius: 20px;
+        }
+        .friend{
+            display: flex;
+            width: 100%;
+            padding: 5px;
+            .friend-image{
+                .image{
+                    margin-right: 8px;
+                    position: relative;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        border: 1px solid #DDE6ED;
+                    }
+                    .active-icon{
+                        position: absolute;
+                        width: 13px;
+                        height: 13px;
+                        border-radius: 50%;
+                        background-color: rgb(10, 192, 10);
+                        right: -2px;
+                        bottom: 6px;
+                        border: 1px solid ;
+                    }
+                }
+            }
+            .friend-name-seen{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .friend-name{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    
+                    p{
+                        font-size: 18px;
+                        margin-left: 10px;
+                    }
+                    .friend-msg-time{
+                        margin-left: 10px;
+                        span{
+                            font-size: 12px;
+                            color:grey
+                        }
+                    }
+                } 
+                .seen-unseen-icon{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .check{
+                    //    padding-right: 20px;
+                        color: #279EFF;
+                    }
+                   
+                    
+                }
+            }
+
+        }
+    }
+}

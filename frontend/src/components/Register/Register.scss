@@ -1,0 +1,405 @@
+*{
+  
+.register{
+    padding-top:10px;
+ 
+    background-color:#DDE6ED;
+    width: 100%;
+    height: 100vh;
+
+    .navbar{
+        display: flex;
+        
+       
+        
+        img{
+          margin-left:10px;
+            width: 300px;
+            cursor: pointer;
+            height: 150px;
+          
+            
+        }
+        .box {
+            
+            display: inline-block;
+            
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0px 0px rgba(0,0,0,0.15);
+            transition: all 0.3s ease-in-out;
+          }
+          
+          /* Create the hidden pseudo-element */
+          /* include the shadow for the end state */
+          .box::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: opacity 0.3s ease-in-out;
+          }
+          
+          /* The fast way */
+          
+          .make-it-fast {
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+          }
+          
+          
+          /* Pre-render the bigger shadow, but hide it */
+          
+          .make-it-fast::after {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+          }
+          
+          
+          /* Transition to showing the bigger shadow on hover */
+          
+          .make-it-fast:hover::after {
+            opacity: 1;
+          }
+          
+          /* Scale up the box */
+          .box:hover {
+            transform: scale(1.2, 1.2);
+          }
+          
+          /* Fade in the pseudo-element with the bigger shadow */
+          .box:hover::after {
+            opacity: 1;
+          }
+          
+          /*Misc.*/
+          body {
+            background: #f4f4f6;
+          }
+          
+          .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+          }
+          
+          .center {
+            flex: none;
+            max-width: 50%;
+          }
+    }
+    .container{
+        display: flex;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: center;
+        
+        .imgsource{
+            flex:1;
+            .phonembed{
+              display:none;
+            }
+
+        iframe{
+
+          margin-left: 10px;
+    width: 600px;
+    height:450px;
+    background: linear-gradient(92deg, #2ab8ac, #ffab52);
+     background-size: 200% 200%;
+     border-radius: 10px;
+        }
+
+        }
+        form{
+          flex:1;
+          .register-form{
+         
+        
+
+       .sign-up{
+        display: flex;
+        margin-bottom:10px;
+        .signupbtn{
+          margin-right:130px;
+          padding:10px;
+          border:none;
+          background-color: #173FBC;
+          color: white;
+          border-radius: 3px;
+          
+        }
+        
+        .btn-link{
+          padding:10px;
+         
+          border:1px solid #173FBC;
+          text-decoration: none;
+          color:black;
+          border-radius: 3px;
+
+          &:hover{
+            color:#f4f4f6;
+            background-color: black;
+            cursor: pointer;
+            transition: 0.3s;
+          }
+          
+        }
+        
+          
+         
+        
+
+       }
+          margin-left:100px;
+          
+          .form-group{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            .form-control{
+              width: 250px;
+              height:30px;
+              border: 1px solid #173FBC;
+              outline:1px solid #010909;;
+              padding: 5px;
+             
+            }
+            .form-control-file{
+              width: 250px;
+              height:30px;
+              border: none;
+              
+              outline:none;
+              padding: 5px;
+            }
+             .file-image{
+                     display: flex;
+                     .image{
+                         width: 50px;
+                         height: 50px;
+                         border-radius: 50%;
+                         border : 1px solid rgb(199, 195, 195);
+                         overflow: hidden;
+                         img{
+                             width: 100%;
+                             height: 100%;
+                             object-fit: cover;
+                         }
+                     }
+                     .file{
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: center;
+                         .form-control{
+                             display: none;
+                         }
+                         label{
+                             background-color:#173FBC;
+                             padding: 5px;
+                             margin-bottom: 0px;
+                             border: 1px solid #010909;
+                             width: 120px;
+                             color: #fff;
+                              font-size: 12px;
+                             text-align: center;
+                             border-radius: 50px;
+                             margin-left: 10px;
+                             cursor: pointer;
+                             &:hover{
+                              background-color: #010909;
+                              transition: 0.5s;
+                             }
+                         }
+                        }
+                      }
+            
+          }
+          .btn{
+            width: 260px;
+            height: 35px;
+            background-color: #173FBC;
+            color: #f4f4f6;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover{
+              background-color:#010909;
+              transition: 0.5s;
+            }
+          }
+          
+        }
+      }
+    }
+
+    
+
+}
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 721px){
+  .register{
+    
+    .navbar{
+      display:flex;
+      // justify-content: center;
+      img{
+
+            width: 250px;
+            height: 120px;
+      }
+    }
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      
+      .imgsource{
+        
+        .iframe{
+          margin-left: 10px;
+          width: 400px;
+          height:450px;
+          
+        }
+        
+      }
+      form{
+     
+        .register-form{
+          margin-left:28px;
+          
+         
+          
+        }
+      }
+      
+      
+      
+    }
+  }
+}
+@media screen and (max-width:720px){
+  .register{
+    
+    .navbar{
+      display:flex;
+      justify-content: center;
+      img{
+
+            width: 150px;
+            height: 80px;
+      }
+    }
+    .container{
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      
+      flex-direction: column;
+      .imgsource{
+        .iframe{
+          display: none;
+        }
+        .phonembed{
+        
+          display: block;
+          width:300px;
+          height:350px;
+          margin-bottom: 20px;
+
+        }
+      }
+      form{
+        // align-items: center;
+       
+      .register-form{
+        
+        margin:10px;
+        width:auto;
+      }
+      
+    }
+  }
+  }
+      
+}
+@media screen and (max-width:334px){
+
+.register{
+    
+    .navbar{
+      display:flex;
+      justify-content: center;
+      img{
+
+            width: 120px;
+            height: 60px;
+      }
+    }
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      flex-direction: column;
+      .imgsource{
+        .iframe{
+          display: none;
+        }
+        .phonembed{
+          display: block;
+          width:200px;
+          height:300px;
+          margin-bottom: 20px;
+          
+        }
+      }
+      form{
+       
+        
+      .register-form{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+        margin:5px;
+        width:auto;
+        .form-group{
+
+          .form-control{
+            width: 150px;
+            height:30px;
+            
+        }
+        .form-control-file{
+          width: 150px;
+          height:30px;
+        }
+.file-image{
+  .file{
+    label{
+      width:80px;
+    }
+  }
+}
+      }
+      .btn{
+        width: 150px;
+        height: 35px;
+      }
+     
+    }
+  }
+    
+}
+    
+}}
