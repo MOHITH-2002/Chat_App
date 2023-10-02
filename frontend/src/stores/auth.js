@@ -8,7 +8,7 @@ export const  UserRegister= (data)=>{
      
         try {
 
-            const response = await axios.post('/api/messenger/register',data);
+            const response = await axios.post('https://chat-backend-u63j.onrender.com/api/messenger/register',data);
       
         localStorage.setItem('AuthToken',response.data.token);
 
@@ -36,7 +36,7 @@ export const  UserLogin= (data)=>{
      
         try {
 
-            const response = await axios.post('/api/messenger/login',data);
+            const response = await axios.post('https://chat-backend-u63j.onrender.com/api/messenger/login',data);
         
         localStorage.setItem('AuthToken',response.data.token);
 
@@ -62,7 +62,7 @@ export const  UserLogin= (data)=>{
 
 export const userLogout = ()=>async(dispatch)=>{
     try {
-        const response = await axios.post('/api/messenger/user-logout');
+        const response = await axios.post('https://chat-backend-u63j.onrender.com/api/messenger/user-logout');
    if(response.data.success){
     localStorage.removeItem('AuthToken');
     dispatch({
