@@ -33,7 +33,7 @@ const Messanger = () => {
      const [typingmsg,settypingmsg]=useState('');
   
      useEffect(()=>{
-          socket.current= io('http://localhost:8000');
+          socket.current= io('https://chat-backend-u63j.onrender.com');
           },[])
      useEffect(()=>{
           socket.current.emit('addUser',myInformation.id,myInformation);
