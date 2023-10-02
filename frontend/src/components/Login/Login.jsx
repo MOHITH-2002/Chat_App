@@ -50,7 +50,7 @@ const Login = () => {
   }
   useEffect(() => {
     if(Authenticate){
-      navigate('/user-api-messenger-single');
+      navigate('https://chat-backend-u63j.onrender.com/user-api-messenger-single');
     }
     if(success)
     toast.success(success);
