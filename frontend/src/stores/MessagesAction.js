@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export  const GetFriends = async (dispatch)=>{
         try {
-            const response = await axios.get("/api/messenger/get-friends");
+            const response = await axios.get("https://chat-backend-u63j.onrender.com/api/messenger/get-friends");
         
             dispatch({
                 type: GET_FRIENDS_SUCCESS,
@@ -19,7 +19,7 @@ export  const GetFriends = async (dispatch)=>{
 export const sendMessage = (data) => async (dispatch) =>{
     try {
        
-        const response = await axios.post("/api/messenger/messages-sending",data);
+        const response = await axios.post("https://chat-backend-u63j.onrender.com/api/messenger/messages-sending",data);
        
         dispatch({
             type: SEND_MESSAGES_SUCCESS,
@@ -37,7 +37,7 @@ export const getMessages =  (id)=>{
     return async (dispatch)=>{
 
         try {
-            const response = await axios.get(`/api/messenger/get-message/${id}`,id);
+            const response = await axios.get(`https://chat-backend-u63j.onrender.com/api/messenger/get-message/${id}`,id);
            
             dispatch({
                 type: GET_MESSAGES_SUCCESS,
@@ -56,7 +56,7 @@ export const getMessages =  (id)=>{
 export const sendImageMessage =  (data)=> async (dispatch)=>{
   
     try {
-        const response = await axios.post(`api/messenger/send-image`,data);
+        const response = await axios.post(`https://chat-backend-u63j.onrender.com/api/messenger/send-image`,data);
         dispatch({
             type: SEND_MESSAGES_SUCCESS,
             payload : {
@@ -70,7 +70,7 @@ export const sendImageMessage =  (data)=> async (dispatch)=>{
 
 export const seenMessage = (message)=> async (dispatch)=> {
     try {
-        const response = await axios.post('api/messenger/seen-Message',message);
+        const response = await axios.post('https://chat-backend-u63j.onrender.com/api/messenger/seen-Message',message);
        
     } catch (error) {
         console.log(error);
@@ -78,7 +78,7 @@ export const seenMessage = (message)=> async (dispatch)=> {
 }
 export const updateMessage = (message)=> async (dispatch)=> {
     try {
-        const response = await axios.post('api/messenger/delivered',message);
+        const response = await axios.post('https://chat-backend-u63j.onrender.com/api/messenger/delivered',message);
        
     } catch (error) {
         console.log(error);
